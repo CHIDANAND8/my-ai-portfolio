@@ -17,7 +17,7 @@ const ProjectCard = ({ proj }) => {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/explain_project", {
+      const res = await fetch("https://portfolio-backend-lo2f.onrender.com/explain_project", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ title: proj.title, details: proj.details })

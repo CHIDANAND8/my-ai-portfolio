@@ -17,7 +17,7 @@ export default function Keyword({ word, logo }) {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/explain", {
+      const res = await fetch("https://portfolio-backend-lo2f.onrender.com/explain", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ word })
