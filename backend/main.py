@@ -64,7 +64,7 @@ async def login(req: AuthRequest):
 # -----------------
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 client = AsyncGroq(api_key=GROQ_API_KEY)
-MODEL_NAME = "llama3-8b-8192" 
+MODEL_NAME = "llama-3.1-8b-instant" 
 
 async def generate_ai_response(prompt: str) -> str:
     """Helper function to communicate with Groq API."""
