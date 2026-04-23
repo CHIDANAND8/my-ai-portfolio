@@ -59,7 +59,7 @@ export default function Chatbot() {
             className="glass-panel w-80 h-96 p-4 flex flex-col mb-4 absolute bottom-full right-0"
           >
             <div className="flex justify-between items-center mb-3 border-b border-white/10 pb-2">
-              <h3 className="font-semibold text-white">Chidanand AI</h3>
+              <h3 className="font-semibold text-white">Asistant</h3>
               <div className="flex gap-2">
                 {chat.length > 0 && (
                   <button onClick={() => {

@@ -40,17 +40,31 @@ export default function Layout() {
   };
 
   return (
-    <div className="app-container">
+    <div className="app-container flex flex-col md:flex-row h-screen w-screen overflow-hidden">
       {/* Background Orbs */}
       <div className="bg-orb orb-1"></div>
       <div className="bg-orb orb-2"></div>
 
-      {/* Sidebar */}
+      {/* Mobile Top Header */}
+      <div className="md:hidden glass-panel mx-4 mt-4 p-4 flex justify-between items-center rounded-2xl z-40 shrink-0">
+        <h1 className="text-xl font-bold text-gradient tracking-wider">PORTFOLIO</h1>
+        {token ? (
+          <button onClick={handleLogout} className="text-xs text-red-400 border border-red-500/30 px-3 py-1 rounded-full hover:bg-red-500/10">
+            Logout
+          </button>
+        ) : (
+          <Link to="/login" className="text-xs text-primary border border-primary/30 px-3 py-1 rounded-full hover:bg-primary/10">
+            Sign In
+          </Link>
+        )}
+      </div>
+
+      {/* Desktop Sidebar */}
       <motion.nav 
         initial={{ x: -200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="glass-panel w-64 m-4 flex flex-col justify-between overflow-y-auto custom-scrollbar"
+        className="hidden md:flex glass-panel w-64 m-4 flex-col justify-between overflow-y-auto custom-scrollbar shrink-0 z-40"
       >
         <div className="p-6">
           <h1 className="text-2xl font-bold text-gradient mb-8 tracking-wider">
@@ -83,7 +97,7 @@ export default function Layout() {
             })}
           </div>
 
-          {/* Search History */}
+          {/* Search History (Desktop Only) */}
           {history.length > 0 && (
             <div className="mt-8 border-t border-white/10 pt-4">
               <div className="flex justify-between items-center mb-3">
@@ -122,20 +136,41 @@ export default function Layout() {
       </motion.nav>
 
       {/* Main Content Area */}
-      <main className="main-content">
+      <main className="main-content flex-1 overflow-y-auto w-full pb-24 md:pb-0 relative z-10">
         <motion.div
           key={location.pathname}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4 }}
-          className="h-full"
+          className="h-full min-h-full"
         >
           <Outlet />
         </motion.div>
       </main>
       
-      {/* AI Chatbot only shown inside the protected layout */}
+      {/* Mobile Bottom Tab Bar */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 glass-panel rounded-t-2xl rounded-b-none border-b-0 border-x-0 z-50 p-2 flex justify-around items-center bg-black/80 backdrop-blur-xl">
+        {navLinks.map((link) => {
+          const isActive = location.pathname === link.path;
+          return (
+            <Link key={link.path} to={link.path} className="relative flex flex-col items-center justify-center p-2">
+              <span className={`text-[10px] font-medium z-10 ${isActive ? "text-white" : "text-gray-400"}`}>
+                {link.name}
+              </span>
+              {isActive && (
+                <motion.div
+                  layoutId="mobile-active"
+                  className="absolute inset-0 bg-primary/20 border border-primary/50 rounded-xl"
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                />
+              )}
+            </Link>
+          );
+        })}
+      </nav>
+
+      {/* AI Chatbot */}
       <Chatbot />
     </div>
   );

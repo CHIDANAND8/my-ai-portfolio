@@ -3,13 +3,20 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "electron/main.cjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "desktop": "electron .",
+    "mobile:init": "cap init",
+    "mobile:sync": "cap sync"
   },
   "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
     "framer-motion": "^12.38.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
@@ -27,6 +34,11 @@
     "globals": "^17.5.0",
     "postcss": "^8.5.10",
     "tailwindcss": "^3.4.19",
-    "vite": "^8.0.9"
+    "vite": "^8.0.9",
+    "@capacitor/cli": "^6.0.0",
+    "electron": "^29.1.0",
+    "electron-builder": "^24.13.3",
+    "concurrently": "^8.2.2",
+    "wait-on": "^7.2.0"
   }
 }
