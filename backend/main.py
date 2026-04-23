@@ -21,8 +21,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mock database for users
-users_db = {}
+# Mock database for users (Adding a default admin user so it survives server restarts)
+users_db = {
+    "admin@chidanand.ai": {"password": "admin"}
+}
 
 # Pydantic models for request bodies
 class AuthRequest(BaseModel):
