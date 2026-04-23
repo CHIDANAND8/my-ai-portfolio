@@ -1,0 +1,16 @@
+src/
+ ├── components/
+ │    ├── Navbar.jsx
+ │    ├── Keyword.jsx
+ │    ├── Chatbot.jsx
+ │
+ ├── pages/
+ │    ├── Home.jsx
+ │    ├── About.jsx
+ │    ├── Skills.jsx
+ │    ├── Projects.jsx
+ │    ├── Experience.jsx
+ │    ├── Contact.jsx
+ │
+ ├── App.jsx
+ ├── main.jsx
