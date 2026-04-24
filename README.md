@@ -1,5 +1,7 @@
 # Portfolio-AI: 6th Generation 3D Portfolio
 
+**🔗 Live Demo:** [https://share.google/arDwnNgEDXrmd0oUL](https://share.google/arDwnNgEDXrmd0oUL)
+
 This is a premium, AI-powered portfolio website built for Chidanand M, a Full Stack AI/ML Engineer. The project features a stunning 6th-generation 3D glassmorphic UI and integrates a local Large Language Model (`llama3.2`) via FastAPI to intelligently explain skills and summarize projects.
 
 ---
