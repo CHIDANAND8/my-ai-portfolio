@@ -51,19 +51,55 @@ This is a premium, AI-powered portfolio website built for Chidanand M, a Full St
 
 ---
 
-## 💻 How to Run Locally
+## 💻 How to Run & Deploy
 
-### 1. Start the Backend (FastAPI + Ollama)
-Ensure your local Ollama daemon is running with the `llama3.2` model.
+### 1. Start the Backend (FastAPI + Groq)
+Ensure you have activated your Python virtual environment and set up your `.env` file with `GROQ_API_KEY`.
 ```bash
 cd backend
+# Install dependencies
+pip install -r requirements.txt
+# Run the server
 uvicorn main:app --reload --port 8000
 ```
 
-### 2. Start the Frontend (Vite/React)
+### 2. Start the Frontend (Vite/React Web App)
 ```bash
+# Install dependencies
 npm install
+# Start local development server
 npm run dev
 ```
 
-Visit `http://localhost:5173` to explore the portfolio!
+### 3. Build for Desktop (.exe)
+```bash
+# Test the Desktop app locally
+npm run desktop
+```
+
+### 4. Build for Mobile (Android)
+```bash
+# Build the React files first
+npm run build
+# Sync files to native Android project
+npm run mobile:sync
+# Open in Android Studio to build APK
+npx cap open android
+```
+
+---
+
+## 🛠️ Git & Deployment Commands
+
+When you make changes to your code, use these commands to save and push your updates to GitHub. Vercel and Render will automatically rebuild your application when you push!
+
+```bash
+# 1. Add all changed files to staging
+git add .
+
+# 2. Commit the changes with a message
+git commit -m "Describe your changes here"
+
+# 3. Push to GitHub
+git push
+```
