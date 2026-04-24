@@ -1,4 +1,4 @@
-# Portfolio-AI: 6th Generation 3D Portfolio
+# Portfolio-AI: 3D Portfolio
 
 **🔗 Live Demo:** [https://share.google/arDwnNgEDXrmd0oUL](https://share.google/arDwnNgEDXrmd0oUL)
 
