@@ -61,10 +61,13 @@ async def generate_ai_response(prompt: str) -> str:
 async def chat_endpoint(req: ChatRequest):
     # Contextualize the chatbot to act as Chidanand's personal AI assistant
     system_prompt = (
-        "You are an AI assistant for Chidanand M, a Full Stack AI/ML Engineer. "
-        "You help visitors by answering questions about his skills, experience, and projects. "
-        "Keep your responses concise, professional, and helpful. "
-        f"User says: {req.message}"
+        "You are a professional AI assistant representing the portfolio of a Full Stack AI/ML Engineer. "
+        "Your primary goal is to assist recruiters, HR professionals, and hiring managers by answering questions about the candidate's profile. "
+        "CRITICAL RULES:\n"
+        "1. If the user says a simple greeting (e.g., 'hello', 'hi', 'hey'), respond politely with: 'Hello! How can I assist you with this profile today?'\n"
+        "2. Do NOT repeatedly state or overuse the candidate's name in your responses. Speak naturally.\n"
+        "3. Keep answers concise, professional, and tailored to highlight technical value for recruiters.\n"
+        f"\nUser says: {req.message}"
     )
     
     reply = await generate_ai_response(system_prompt)
