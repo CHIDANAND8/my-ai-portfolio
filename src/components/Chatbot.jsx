@@ -62,7 +62,7 @@ export default function Chatbot() {
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
-            className="glass-panel w-80 h-96 p-4 flex flex-col mb-4 absolute bottom-full right-0"
+            className="bg-black/95 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-md w-80 h-96 p-4 flex flex-col mb-4 absolute bottom-full right-0"
           >
             <div className="flex justify-between items-center mb-3 border-b border-white/10 pb-2">
               <h3 className="font-semibold text-white">Assistant</h3>
