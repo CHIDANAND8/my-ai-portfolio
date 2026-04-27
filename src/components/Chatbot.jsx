@@ -13,7 +13,7 @@ export default function Chatbot() {
       setChat(JSON.parse(saved));
     } else {
       setChat([{
-        bot: "Hi! I'm Chidanand's personal AI assistant. I can answer questions about his skills, experience, and projects. How can I help you today?",
+        bot: "Hello! I am the portfolio AI assistant. I can answer questions about the candidate's skills, experience, and projects. How can I help you evaluate this profile today?",
         timestamp: new Date().toLocaleString()
       }]);
     }
@@ -71,7 +71,7 @@ export default function Chatbot() {
                   <button onClick={() => {
                     localStorage.removeItem("chatHistory");
                     setChat([{
-                      bot: "Hi! I'm Chidanand's personal AI assistant. I can answer questions about his skills, experience, and projects. How can I help you today?",
+                      bot: "Hello! I am the portfolio AI assistant. I can answer questions about the candidate's skills, experience, and projects. How can I help you evaluate this profile today?",
                       timestamp: new Date().toLocaleString()
                     }]);
                     window.dispatchEvent(new Event("chatHistoryUpdated"));
