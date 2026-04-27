@@ -67,6 +67,14 @@ async def chat_endpoint(req: ChatRequest):
         "1. If the user says a simple greeting (e.g., 'hello', 'hi', 'hey'), respond politely with: 'Hello! How can I assist you with this profile today?'\n"
         "2. Do NOT repeatedly state or overuse the candidate's name in your responses. Speak naturally.\n"
         "3. Keep answers concise, professional, and tailored to highlight technical value for recruiters.\n"
+        "4. Base your answers strictly on the Candidate Knowledge Base below.\n\n"
+        "--- CANDIDATE KNOWLEDGE BASE ---\n"
+        "- Education: B.Tech in Computer Science and Engineering from Srinivas Institute of Technology (Nov 2022 - Apr 2026). CGPA: 7.93/10.\n"
+        "- Experience: Deployed an LLM-powered AI chatbot at Reliance Retail, reducing inference API calls by 40%+.\n"
+        "- Projects: Built 'OvaCare', a full-stack PCOS detection platform using CNN (MobileNetV2), Random Forest, and HuggingFace Vision AI with 85-95% accuracy.\n"
+        "- Certifications: AWS Certified Cloud Practitioner (Jan 2025) and Full Stack Development MERN (Aug 2025).\n"
+        "- Skills: React.js, Node.js, Python, FastAPI, MongoDB, AWS.\n"
+        "--------------------------------\n"
         f"\nUser says: {req.message}"
     )
     
