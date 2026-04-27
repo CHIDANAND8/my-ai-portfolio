@@ -11,6 +11,11 @@ export default function Chatbot() {
     const saved = localStorage.getItem("chatHistory");
     if (saved) {
       setChat(JSON.parse(saved));
+    } else {
+      setChat([{
+        bot: "Hi! I'm Chidanand's personal AI assistant. I can answer questions about his skills, experience, and projects. How can I help you today?",
+        timestamp: new Date().toLocaleString()
+      }]);
     }
   }, []);
 
@@ -31,7 +36,8 @@ export default function Chatbot() {
     setMessage("");
 
     try {
-      const res = await fetch("https://portfolio-backend-lo2f.onrender.com/chat", {
+      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+      const res = await fetch(`${API_URL}/chat`, {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ message: userMsg })
@@ -59,12 +65,15 @@ export default function Chatbot() {
             className="glass-panel w-80 h-96 p-4 flex flex-col mb-4 absolute bottom-full right-0"
           >
             <div className="flex justify-between items-center mb-3 border-b border-white/10 pb-2">
-              <h3 className="font-semibold text-white">Asistant</h3>
+              <h3 className="font-semibold text-white">Assistant</h3>
               <div className="flex gap-2">
                 {chat.length > 0 && (
                   <button onClick={() => {
                     localStorage.removeItem("chatHistory");
-                    setChat([]);
+                    setChat([{
+                      bot: "Hi! I'm Chidanand's personal AI assistant. I can answer questions about his skills, experience, and projects. How can I help you today?",
+                      timestamp: new Date().toLocaleString()
+                    }]);
                     window.dispatchEvent(new Event("chatHistoryUpdated"));
                   }} className="text-xs text-red-400 hover:text-red-300">Clear</button>
                 )}
@@ -76,12 +85,16 @@ export default function Chatbot() {
               {chat.map((c, i) => (
                 <div key={i} className="flex flex-col gap-1 text-sm">
                   {c.timestamp && <span className="text-[10px] text-gray-500 text-center w-full block mb-1">{c.timestamp}</span>}
-                  <div className="self-end bg-primary/20 border border-primary/30 text-white p-2 rounded-xl rounded-tr-none max-w-[80%]">
-                    {c.user}
-                  </div>
-                  <div className="self-start bg-white/5 border border-white/10 text-gray-300 p-2 rounded-xl rounded-tl-none max-w-[80%]">
-                    {c.bot}
-                  </div>
+                  {c.user && (
+                    <div className="self-end bg-primary/20 border border-primary/30 text-white p-2 rounded-xl rounded-tr-none max-w-[80%]">
+                      {c.user}
+                    </div>
+                  )}
+                  {c.bot && (
+                    <div className="self-start bg-white/5 border border-white/10 text-gray-300 p-2 rounded-xl rounded-tl-none max-w-[80%]">
+                      {c.bot}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

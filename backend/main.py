@@ -1,9 +1,9 @@
+
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 import httpx
-import uuid
 import os
 from dotenv import load_dotenv
 from groq import AsyncGroq
@@ -21,43 +21,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mock database for users (Adding a default admin user so it survives server restarts)
-users_db = {
-    "admin@chidanand.ai": {"password": "admin"}
-}
-
 # Pydantic models for request bodies
-class AuthRequest(BaseModel):
-    email: str
-    password: str
-
 class ChatRequest(BaseModel):
     message: str
 
 class ExplainRequest(BaseModel):
     word: str
-
-# -----------------
-# Auth Endpoints
-# -----------------
-@app.post("/register")
-async def register(req: AuthRequest):
-    if req.email in users_db:
-        raise HTTPException(status_code=400, detail="User already registered")
-    
-    # Store the user (in a real app, hash the password!)
-    users_db[req.email] = {"password": req.password}
-    return {"message": "Registered successfully"}
-
-@app.post("/login")
-async def login(req: AuthRequest):
-    user = users_db.get(req.email)
-    if not user or user["password"] != req.password:
-        raise HTTPException(status_code=401, detail="Invalid credentials")
-    
-    # Generate a dummy token
-    access_token = f"token-{uuid.uuid4()}"
-    return {"access_token": access_token}
 
 # -----------------
 # Groq API Integration
@@ -93,6 +62,7 @@ async def chat_endpoint(req: ChatRequest):
     # Contextualize the chatbot to act as Chidanand's personal AI assistant
     system_prompt = (
         "You are an AI assistant for Chidanand M, a Full Stack AI/ML Engineer. "
+        "You help visitors by answering questions about his skills, experience, and projects. "
         "Keep your responses concise, professional, and helpful. "
         f"User says: {req.message}"
     )

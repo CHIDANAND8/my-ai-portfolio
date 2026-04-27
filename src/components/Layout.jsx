@@ -1,21 +1,25 @@
-import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Chatbot from "./Chatbot";
+import { IntroContext } from "../App";
 
 export default function Layout() {
   const location = useLocation();
-  const navigate = useNavigate();
-  const token = localStorage.getItem("token");
   const [history, setHistory] = useState([]);
+  const { playIntro } = useContext(IntroContext);
 
   useEffect(() => {
     const loadHistory = () => {
       const saved = localStorage.getItem("chatHistory");
       if (saved) {
         const chats = JSON.parse(saved);
-        const recent = chats.reverse().slice(0, 5).map(c => ({ user: c.user, timestamp: c.timestamp }));
-        setHistory(recent);
+        if (Array.isArray(chats)) {
+          const recent = chats.reverse().slice(0, 5).map(c => ({ user: c.user, timestamp: c.timestamp }));
+          setHistory(recent);
+        } else {
+          setHistory([]);
+        }
       } else {
         setHistory([]);
       }
@@ -34,11 +38,6 @@ export default function Layout() {
     { name: "Contact", path: "/contact" },
   ];
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/register");
-  };
-
   return (
     <div className="app-container flex flex-col md:flex-row h-screen w-screen overflow-hidden">
       {/* Background Orbs */}
@@ -48,15 +47,6 @@ export default function Layout() {
       {/* Mobile Top Header */}
       <div className="md:hidden glass-panel mx-4 mt-4 p-4 flex justify-between items-center rounded-2xl z-40 shrink-0">
         <h1 className="text-xl font-bold text-gradient tracking-wider">PORTFOLIO</h1>
-        {token ? (
-          <button onClick={handleLogout} className="text-xs text-red-400 border border-red-500/30 px-3 py-1 rounded-full hover:bg-red-500/10">
-            Logout
-          </button>
-        ) : (
-          <Link to="/login" className="text-xs text-primary border border-primary/30 px-3 py-1 rounded-full hover:bg-primary/10">
-            Sign In
-          </Link>
-        )}
       </div>
 
       {/* Desktop Sidebar */}
@@ -123,15 +113,13 @@ export default function Layout() {
         </div>
         
         <div className="p-6 border-t border-white/10 shrink-0">
-          {token ? (
-            <button onClick={handleLogout} className="btn-3d w-full" style={{ backgroundImage: "linear-gradient(135deg, #ef4444 0%, #b91c1c 100%)" }}>
-              Logout
-            </button>
-          ) : (
-            <Link to="/login">
-              <button className="btn-3d w-full">Sign In</button>
-            </Link>
-          )}
+          <button 
+            onClick={playIntro}
+            className="btn-3d w-full"
+            style={{ backgroundImage: "linear-gradient(135deg, #10b981 0%, #059669 100%)" }}
+          >
+            Play AI Intro
+          </button>
         </div>
       </motion.nav>
 

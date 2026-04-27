@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import heroImage from "../assets/hero.png";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -17,9 +18,8 @@ export default function Home() {
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="mb-8 inline-block"
         >
-          <div className="w-24 h-24 rounded-2xl bg-gradient-to-tr from-primary to-secondary mx-auto shadow-btn flex items-center justify-center rotate-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-white/20 backdrop-blur-md"></div>
-            <span className="text-4xl font-bold text-white relative z-10 -rotate-12">AI</span>
+          <div className="w-40 h-40 rounded-full mx-auto shadow-[0_0_30px_#4f46e5] flex items-center justify-center relative overflow-hidden border-4 border-primary/50">
+            <img src={heroImage} alt="Chidanand M" className="w-full h-full object-cover" />
           </div>
         </motion.div>
 
