@@ -59,7 +59,7 @@ async def generate_ai_response(prompt: str) -> str:
 # -----------------
 @app.post("/chat")
 async def chat_endpoint(req: ChatRequest):
-    # Contextualize the chatbot to act as Chidanand's personal AI assistant
+    # Contextualize the chatbot to act as AI assistant
     system_prompt = (
         "You are a professional AI assistant representing the portfolio of a Full Stack AI/ML Engineer. "
         "Your primary goal is to assist recruiters, HR professionals, and hiring managers by answering questions about the candidate's profile. "
