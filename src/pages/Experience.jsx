@@ -7,10 +7,9 @@ export default function Experience() {
       company: "Reliance Retail Limited",
       duration: "Dec 2025 – Mar 2026",
       details: [
-        "Designed and deployed a full-stack AI chatbot using LLaMA (Ollama), FastAPI, and React.js, enabling natural language retail query resolution with 95%+ query accuracy.",
-        "Engineered a database-first LLM response pipeline with SQLite, reducing redundant AI inference API calls by 40%+ and significantly improving response latency.",
-        "Built and documented scalable REST APIs with CORS support, efficient prompt engineering, and robust error handling — supporting high-concurrency enterprise usage.",
-        "Persisted 1,000+ user interaction sessions via SQLite-backed memory management, ensuring seamless conversation continuity across enterprise users."
+        "Translated client retail-operations challenges into a production LLM chatbot (LLaMA via Ollama, FastAPI, React.js) achieving 95%+ query resolution accuracy; engineered a SQLite-backed database-first data pipeline with A/B-tested prompt strategies that reduced redundant AI inference API calls by 40%, lowering latency and compute cost at enterprise scale.",
+        "Architected scalable REST APIs with structured prompt engineering and CORS support for high-concurrency enterprise traffic; persisted 1,000+ multi-turn user conversation sessions in SQLite enabling seamless dialogue continuity — demonstrating production ML deployment and system design valued by consulting delivery environments.",
+        "Collaborated cross-functionally with business stakeholders and platform teams to document technical approaches, model performance metrics, and solution architecture, ensuring client teams could maintain and extend the deployed AI system independently."
       ]
     },
     {
@@ -18,10 +17,8 @@ export default function Experience() {
       company: "Technologics Global",
       duration: "May 2025 – Aug 2025",
       details: [
-        "Engineered 5+ MERN stack applications (MongoDB, Express.js, React.js, Node.js), delivering production-ready, responsive interfaces supporting 100+ concurrent users.",
-        "Developed 10+ RESTful API endpoints, improving backend throughput by 30% through efficient CRUD architecture and optimized query design.",
-        "Tested APIs end-to-end using Postman, maintaining 98%+ endpoint reliability throughout the full software development lifecycle (SDLC).",
-        "Delivered responsive, accessible front-end UIs with HTML5, CSS3, and JavaScript, reducing cross-device inconsistencies by 25%."
+        "Built 5+ production MERN stack applications (MongoDB, Express.js, React.js, Node.js) supporting 100+ concurrent users; developed 10+ RESTful API endpoints improving backend throughput by 30% through optimised CRUD architecture and query design.",
+        "Maintained 98%+ API endpoint reliability via comprehensive Postman testing throughout the full SDLC; delivered responsive HTML5/CSS3/JavaScript UIs reducing cross-device inconsistencies by 25%."
       ]
     }
   ];

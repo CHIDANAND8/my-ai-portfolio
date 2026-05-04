@@ -30,7 +30,7 @@ export default function Home() {
         </motion.h1>
 
         <p className="text-xl md:text-2xl text-white font-medium mb-4 tracking-wide">
-          Full Stack AI/ML Engineer
+          AI/ML Engineer | Full Stack Developer
         </p>
 
         <p className="text-lg text-text-muted mb-10 max-w-lg mx-auto leading-relaxed">

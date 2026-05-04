@@ -95,43 +95,40 @@ const ProjectCard = ({ proj }) => {
 export default function Projects() {
   const projects = [
     {
-      title: "OvaCare — AI-Powered PCOS Healthcare Platform",
+      title: "OvaCare — AI-Powered PCOS Detection Platform",
       duration: "Jan 2026 – Apr 2026",
-      tags: ["React 18", "Node.js", "Python Flask", "CNN (MobileNetV2)", "Random Forest"],
+      tags: ["React 18", "Node.js", "MongoDB", "Flask", "CNN (MobileNetV2)", "HuggingFace", "Random Forest"],
       details: [
-        "Architected a full-stack healthcare platform for PCOS detection and wellness management using React 18, Node.js, MongoDB, Flask, and Socket.IO.",
-        "Built a 4-layer AI detection engine: CNN deep learning (MobileNetV2), HuggingFace Vision AI, OpenCV fallback, and Random Forest symptom-based classifier.",
-        "Trained and deployed a Random Forest Classifier using scikit-learn on clinical and lifestyle data for early PCOS risk prediction with 85–90% accuracy.",
-        "Implemented real-time anonymous community chat (Socket.IO), period cycle tracking, and a PCOS-friendly diet tracker.",
-        "Secured the platform with JWT authentication, bcrypt password hashing, and Multer-validated file uploads."
+        "Architected a 4-layer AI diagnostic engine — CNN deep learning (MobileNetV2, 80–90% accuracy), HuggingFace Vision AI (85–95% accuracy), OpenCV computer vision fallback, and Random Forest symptom classifier (scikit-learn, 85–90% accuracy) — with automatic failover guaranteeing 100% detection availability; evaluated models using precision/recall, cross-validation, and bias-variance analysis to optimise clinical reliability.",
+        "Delivered 3 real-time wellness modules (anonymous community chat via Socket.IO, predictive period cycle tracker, PCOS-diet nutrition monitor) with JWT authentication, bcrypt hashing, and Multer file validation — end-to-end ML pipeline from feature engineering and model training to HIPAA-aligned production deployment on React 18 (TypeScript), Node.js/Express 5, MongoDB, Flask.",
+        "Demonstrated measurable business impact: multi-layer failover architecture ensures zero downtime for diagnostic availability; SQL-backed session and feature storage underpins data persistence across all modules."
       ]
     },
     {
-      title: "Relex Enterprise AI — LLM-Powered Full Stack Chat System",
-      duration: "2025",
-      tags: ["LLaMA", "FastAPI", "React.js", "SQLite"],
+      title: "Relex Enterprise AI — LLM-Powered Enterprise Chat System",
+      duration: "Dec 2025 – Mar 2026",
+      tags: ["LLaMA", "FastAPI", "React.js", "SQLite", "MLOps"],
       details: [
-        "Built a production-grade conversational AI platform using LLaMA, FastAPI, React.js, and SQLite.",
-        "Achieved 95%+ query accuracy with a 40% reduction in LLM API calls via a database-hybrid response pipeline.",
-        "Deployed a scalable API-driven backend with CORS and comprehensive error handling, supporting 500+ concurrent enterprise users."
+        "Built a production-grade conversational AI platform (LLaMA, FastAPI, React.js, SQLite) achieving 95%+ query accuracy; engineered a database-hybrid LLM data pipeline with A/B-tested prompt strategies that cut AI inference API calls by 40% — demonstrating cost-efficient MLOps at scale and translating enterprise client requirements into a maintainable AI system.",
+        "Scaled to 500+ concurrent enterprise users via an API-driven backend with full CORS support, model evaluation metrics, and comprehensive error handling; used SQLite for structured feature and session storage supporting multi-turn dialogue continuity."
       ]
     },
     {
-      title: "Ogtech eCommerce Web Application",
-      duration: "2025",
-      tags: ["MERN Stack", "Performance Optimization"],
+      title: "AI Resume Analyzer — LLM-Powered ATS Optimisation Tool",
+      duration: "2026",
+      tags: ["FastAPI", "React.js", "SQLite", "spaCy NLP", "LLM"],
       details: [
-        "Built a fully responsive eCommerce platform supporting 200+ product SKUs with cart and checkout flows.",
-        "Optimized page load time by 20% via lazy loading and asset compression techniques."
+        "Built an end-to-end AI resume analysis engine (FastAPI, React.js, SQLite, spaCy NLP) performing keyword extraction and feature engineering on resume text — generating ATS scores (0–100) and section-wise feedback via structured LLM prompt engineering with consistent JSON output; evaluated NLP pipeline quality using precision/recall metrics.",
+        "Implemented JWT authentication, bcrypt hashing, and SQLite-backed history persistence; SQL queries used for per-user session retrieval and result aggregation demonstrate applied data manipulation skills required in enterprise ML pipelines."
       ]
     },
     {
-      title: "Hotel & Restaurant Booking Website",
-      duration: "Jan 2025 – Feb 2025",
-      tags: ["Full Stack", "Database Management"],
+      title: "PromptLab AI — LLM Prompt Testing and Optimisation Platform",
+      duration: "2026",
+      tags: ["FastAPI", "React.js", "TypeScript", "Docker", "CI/CD"],
       details: [
-        "Delivered a full-stack booking platform handling 50+ concurrent reservations.",
-        "Built database-backed storage and a clean, mobile-responsive user interface."
+        "Engineered a full-stack prompt engineering workbench (FastAPI, React.js TypeScript, Tailwind CSS, SQLite) with an A/B testing engine for prompt variants, customisable LLM parameter controls (temperature, max tokens), and Recharts performance dashboards — enabling data-driven model evaluation across OpenAI and LLaMA providers.",
+        "Containerised with Docker Compose and NGINX reverse proxy; CI/CD pipeline via GitHub Actions for automated build and deployment — demonstrating production MLOps practices and end-to-end machine learning pipeline design."
       ]
     }
   ];

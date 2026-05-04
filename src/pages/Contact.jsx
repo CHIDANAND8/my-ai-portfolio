@@ -5,7 +5,7 @@ export default function Contact() {
     { label: "Email", value: "chidanandmc87@gmail.com", link: "mailto:chidanandmc87@gmail.com" },
     { label: "Phone", value: "+91 8792588362", link: "tel:+918792588362" },
     { label: "LinkedIn", value: "linkedin.com/in/chidanand-m-aarya", link: "https://linkedin.com/in/chidanand-m-aarya" },
-    { label: "GitHub", value: "github.com/CHIDANAND8", link: "https://github.com/CHIDANAND8" }
+    { label: "GitHub", value: "github.com/CHIDANANDM8", link: "https://github.com/CHIDANANDM8" }
   ];
 
   return (
