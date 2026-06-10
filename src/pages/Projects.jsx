@@ -110,7 +110,7 @@ export default function Projects() {
     {
       title: "OvaCare — AI-Powered PCOS Detection Platform",
       duration: "Jan 2026 – Apr 2026",
-      github: "https://github.com/CHIDANANDM8/Ovacare",
+      github: "https://github.com/CHIDANAND8/Ovacare",
       tags: ["TensorFlow", "PyTorch", "CNN/MobileNetV2", "HuggingFace", "scikit-learn", "FastAPI", "Docker", "CI/CD"],
       details: [
         "Built a 4-layer AI diagnostic engine using Deep Learning (TensorFlow, PyTorch, CNN/MobileNetV2, 80–90% accuracy), HuggingFace Transformers Vision AI (85–95% accuracy), and a Machine Learning symptom classifier (scikit-learn) — with automatic failover guaranteeing 100% detection availability; evaluated using precision/recall, cross-validation, and bias-variance analysis.",
@@ -120,7 +120,7 @@ export default function Projects() {
     {
       title: "Relex Enterprise AI — LLM-Powered Enterprise Chat System",
       duration: "Dec 2025 – Mar 2026",
-      github: "https://github.com/CHIDANANDM8/Relex-ai",
+      github: "https://github.com/CHIDANAND8/Relex-ai",
       tags: ["LLaMA", "LangChain", "RAG", "FAISS", "FastAPI", "Docker", "Kubernetes", "AWS", "MLOps"],
       details: [
         "Built a production conversational AI platform using Python, LangChain, RAG, vector databases (FAISS), LLMs (LLaMA), and FastAPI achieving 95%+ query accuracy; engineered a database-hybrid pipeline with A/B-tested prompt engineering that cut AI inference API calls by 40%, demonstrating cost-efficient Generative AI and MLOps at scale.",
@@ -130,7 +130,7 @@ export default function Projects() {
     {
       title: "AI Resume Analyzer — LLM-Powered ATS Optimization Tool",
       duration: "2026",
-      github: "https://github.com/CHIDANANDM8/ai-resume-analyzer",
+      github: "https://github.com/CHIDANAND8/ai-resume-analyzer",
       tags: ["FastAPI", "LLM", "Prompt Engineering", "NLP", "Docker", "CI/CD", "SQL"],
       details: [
         "Built an end-to-end AI resume analysis engine in Python using FastAPI and LLMs — performing keyword extraction and feature engineering on resume text, generating ATS scores (0–100) via structured Generative AI prompt engineering with consistent JSON output; evaluated NLP pipeline quality using precision/recall metrics.",
@@ -140,7 +140,7 @@ export default function Projects() {
     {
       title: "PromptLab AI — LLM Prompt Testing and Optimization Platform",
       duration: "2026",
-      github: "https://github.com/CHIDANANDM8/promptlab-ai",
+      github: "https://github.com/CHIDANAND8/promptlab-ai",
       tags: ["FastAPI", "RAG", "LLaMA", "OpenAI", "Docker", "CI/CD", "AWS", "MLOps"],
       details: [
         "Engineered a full-stack Generative AI workbench in Python (FastAPI) with an A/B testing engine for LLM prompt variants, customizable model parameter controls (temperature, max tokens), and performance dashboards — enabling data-driven model evaluation across OpenAI and LLaMA (RAG-enabled) providers.",
