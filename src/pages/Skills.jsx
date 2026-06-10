@@ -43,18 +43,22 @@ export default function Skills() {
           <div className="glass-panel p-8 relative z-10 hover:z-50 transition-all duration-300">
             <h2 className="text-xl font-semibold mb-6 text-green-400 border-b border-green-400/20 pb-2">AI & Machine Learning</h2>
             <div className="flex flex-wrap gap-4 items-center">
+              <Keyword word="Machine Learning" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" />
               <Keyword word="Deep Learning (CNN)" />
+              <Keyword word="TensorFlow / Keras" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" />
+              <Keyword word="PyTorch" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" />
               <Keyword word="MobileNetV2" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" />
-              <Keyword word="Random Forest" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" />
-              <Keyword word="LLaMA (Ollama)" />
+              <Keyword word="scikit-learn" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" />
               <Keyword word="HuggingFace Transformers" />
-              <Keyword word="Prompt Engineering" />
+              <Keyword word="LangChain" />
               <Keyword word="RAG" />
-              <Keyword word="Agentic AI" />
+              <Keyword word="LLMs (LLaMA / OpenAI)" />
+              <Keyword word="Prompt Engineering" />
+              <Keyword word="Model Fine-tuning" />
+              <Keyword word="Vector Databases (Pinecone, Chroma, FAISS)" />
               <Keyword word="MLOps & Model Deployment" />
               <Keyword word="NLP & spaCy" />
               <Keyword word="OpenCV" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg" />
-              <Keyword word="TensorFlow / Keras" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" />
               <Keyword word="Pandas / NumPy" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" />
             </div>
           </div>
@@ -64,6 +68,7 @@ export default function Skills() {
             <div className="flex flex-wrap gap-4 items-center">
               <Keyword word="AWS" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
               <Keyword word="Docker / Compose" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
+              <Keyword word="Kubernetes" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" />
               <Keyword word="NGINX" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg" />
               <Keyword word="Git & GitHub" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
               <Keyword word="CI/CD (GitHub Actions)" />
@@ -71,8 +76,6 @@ export default function Skills() {
               <Keyword word="JWT & bcrypt" />
               <Keyword word="Postman" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />
               <Keyword word="VS Code" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
-              <Keyword word="Power BI" />
-              <Keyword word="PyCharm" logo="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" />
             </div>
           </div>
         </div>

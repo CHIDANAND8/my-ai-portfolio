@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 export default function Experience() {
   const experiences = [
     {
-      role: "Full Stack AI Developer Intern",
+      role: "AI/ML Developer Intern",
       company: "Reliance Retail Limited",
-      duration: "Dec 2025 – Mar 2026",
+      duration: "Dec 2025 – Mar 2026 | India",
       details: [
-        "Translated client retail-operations challenges into a production LLM chatbot (LLaMA via Ollama, FastAPI, React.js) achieving 95%+ query resolution accuracy; engineered a SQLite-backed database-first data pipeline with A/B-tested prompt strategies that reduced redundant AI inference API calls by 40%, lowering latency and compute cost at enterprise scale.",
-        "Architected scalable REST APIs with structured prompt engineering and CORS support for high-concurrency enterprise traffic; persisted 1,000+ multi-turn user conversation sessions in SQLite enabling seamless dialogue continuity — demonstrating production ML deployment and system design valued by consulting delivery environments.",
-        "Collaborated cross-functionally with business stakeholders and platform teams to document technical approaches, model performance metrics, and solution architecture, ensuring client teams could maintain and extend the deployed AI system independently."
+        "Designed and deployed a production-grade LLM chatbot using Python, LangChain, RAG (Retrieval-Augmented Generation), vector databases, and FastAPI — achieving 95%+ query resolution accuracy; implemented A/B-tested prompt engineering strategies that reduced AI inference API calls by 40% and lowered compute cost at enterprise scale, demonstrating end-to-end MLOps.",
+        "Built an MLOps-driven data pipeline with SQL-backed session storage, persisting 1,000+ multi-turn conversation sessions; architected scalable REST APIs with Docker containerization, CI/CD pipelines, and Git-based version control for high-concurrency enterprise traffic.",
+        "Collaborated with business stakeholders to document model performance metrics, solution architecture, and technical approaches — enabling client teams to independently maintain and extend the deployed AI/ML system."
       ]
     },
     {
-      role: "Full Stack Web Development Intern",
+      role: "Full Stack Developer Intern",
       company: "Technologics Global",
-      duration: "May 2025 – Aug 2025",
+      duration: "May 2025 – Aug 2025 | India",
       details: [
-        "Built 5+ production MERN stack applications (MongoDB, Express.js, React.js, Node.js) supporting 100+ concurrent users; developed 10+ RESTful API endpoints improving backend throughput by 30% through optimised CRUD architecture and query design.",
-        "Maintained 98%+ API endpoint reliability via comprehensive Postman testing throughout the full SDLC; delivered responsive HTML5/CSS3/JavaScript UIs reducing cross-device inconsistencies by 25%."
+        "Built 5+ production web applications using Python (FastAPI/Flask), SQL databases, and REST APIs supporting 100+ concurrent users; developed 10+ API endpoints improving backend throughput by 30%.",
+        "Maintained 98%+ API endpoint reliability via comprehensive testing throughout the SDLC; delivered responsive UIs reducing cross-device inconsistencies by 25%."
       ]
     }
   ];

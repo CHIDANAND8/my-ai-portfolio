@@ -41,15 +41,28 @@ const ProjectCard = ({ proj }) => {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
       
       <div className="flex flex-col mb-4">
-        <h2 
-          className="text-2xl font-bold text-white mb-2 cursor-pointer hover:text-primary transition-colors flex items-center gap-2"
-          onClick={handleClick}
-        >
-          {proj.title}
-          <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full uppercase tracking-wider">
-            Ask AI
-          </span>
-        </h2>
+        <div className="flex items-start justify-between gap-2 flex-wrap">
+          <h2 
+            className="text-2xl font-bold text-white mb-2 cursor-pointer hover:text-primary transition-colors flex items-center gap-2"
+            onClick={handleClick}
+          >
+            {proj.title}
+            <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full uppercase tracking-wider">
+              Ask AI
+            </span>
+          </h2>
+          {proj.github && (
+            <a
+              href={proj.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-xs bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white px-3 py-1.5 rounded-full transition-all border border-white/10 shrink-0 mt-1"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+          )}
+        </div>
         <span className="text-sm text-gray-400 mb-4">{proj.duration}</span>
         <div className="flex flex-wrap gap-2 mb-4">
           {proj.tags.map(tag => (
@@ -97,38 +110,41 @@ export default function Projects() {
     {
       title: "OvaCare — AI-Powered PCOS Detection Platform",
       duration: "Jan 2026 – Apr 2026",
-      tags: ["React 18", "Node.js", "MongoDB", "Flask", "CNN (MobileNetV2)", "HuggingFace", "Random Forest"],
+      github: "https://github.com/CHIDANANDM8/Ovacare",
+      tags: ["TensorFlow", "PyTorch", "CNN/MobileNetV2", "HuggingFace", "scikit-learn", "FastAPI", "Docker", "CI/CD"],
       details: [
-        "Architected a 4-layer AI diagnostic engine — CNN deep learning (MobileNetV2, 80–90% accuracy), HuggingFace Vision AI (85–95% accuracy), OpenCV computer vision fallback, and Random Forest symptom classifier (scikit-learn, 85–90% accuracy) — with automatic failover guaranteeing 100% detection availability; evaluated models using precision/recall, cross-validation, and bias-variance analysis to optimise clinical reliability.",
-        "Delivered 3 real-time wellness modules (anonymous community chat via Socket.IO, predictive period cycle tracker, PCOS-diet nutrition monitor) with JWT authentication, bcrypt hashing, and Multer file validation — end-to-end ML pipeline from feature engineering and model training to HIPAA-aligned production deployment on React 18 (TypeScript), Node.js/Express 5, MongoDB, Flask.",
-        "Demonstrated measurable business impact: multi-layer failover architecture ensures zero downtime for diagnostic availability; SQL-backed session and feature storage underpins data persistence across all modules."
+        "Built a 4-layer AI diagnostic engine using Deep Learning (TensorFlow, PyTorch, CNN/MobileNetV2, 80–90% accuracy), HuggingFace Transformers Vision AI (85–95% accuracy), and a Machine Learning symptom classifier (scikit-learn) — with automatic failover guaranteeing 100% detection availability; evaluated using precision/recall, cross-validation, and bias-variance analysis.",
+        "Deployed end-to-end ML pipeline with MLOps practices: feature engineering, model training, model evaluation, and production deployment via Docker, CI/CD (GitHub Actions), and Git, with SQL-backed data persistence and a Python/FastAPI backend."
       ]
     },
     {
       title: "Relex Enterprise AI — LLM-Powered Enterprise Chat System",
       duration: "Dec 2025 – Mar 2026",
-      tags: ["LLaMA", "FastAPI", "React.js", "SQLite", "MLOps"],
+      github: "https://github.com/CHIDANANDM8/Relex-ai",
+      tags: ["LLaMA", "LangChain", "RAG", "FAISS", "FastAPI", "Docker", "Kubernetes", "AWS", "MLOps"],
       details: [
-        "Built a production-grade conversational AI platform (LLaMA, FastAPI, React.js, SQLite) achieving 95%+ query accuracy; engineered a database-hybrid LLM data pipeline with A/B-tested prompt strategies that cut AI inference API calls by 40% — demonstrating cost-efficient MLOps at scale and translating enterprise client requirements into a maintainable AI system.",
-        "Scaled to 500+ concurrent enterprise users via an API-driven backend with full CORS support, model evaluation metrics, and comprehensive error handling; used SQLite for structured feature and session storage supporting multi-turn dialogue continuity."
+        "Built a production conversational AI platform using Python, LangChain, RAG, vector databases (FAISS), LLMs (LLaMA), and FastAPI achieving 95%+ query accuracy; engineered a database-hybrid pipeline with A/B-tested prompt engineering that cut AI inference API calls by 40%, demonstrating cost-efficient Generative AI and MLOps at scale.",
+        "Scaled to 500+ concurrent users with Docker containerization, Kubernetes-compatible deployment, Git version control, AWS-compatible infrastructure, SQL session storage, and model monitoring metrics supporting multi-turn dialogue continuity."
       ]
     },
     {
-      title: "AI Resume Analyzer — LLM-Powered ATS Optimisation Tool",
+      title: "AI Resume Analyzer — LLM-Powered ATS Optimization Tool",
       duration: "2026",
-      tags: ["FastAPI", "React.js", "SQLite", "spaCy NLP", "LLM"],
+      github: "https://github.com/CHIDANANDM8/ai-resume-analyzer",
+      tags: ["FastAPI", "LLM", "Prompt Engineering", "NLP", "Docker", "CI/CD", "SQL"],
       details: [
-        "Built an end-to-end AI resume analysis engine (FastAPI, React.js, SQLite, spaCy NLP) performing keyword extraction and feature engineering on resume text — generating ATS scores (0–100) and section-wise feedback via structured LLM prompt engineering with consistent JSON output; evaluated NLP pipeline quality using precision/recall metrics.",
-        "Implemented JWT authentication, bcrypt hashing, and SQLite-backed history persistence; SQL queries used for per-user session retrieval and result aggregation demonstrate applied data manipulation skills required in enterprise ML pipelines."
+        "Built an end-to-end AI resume analysis engine in Python using FastAPI and LLMs — performing keyword extraction and feature engineering on resume text, generating ATS scores (0–100) via structured Generative AI prompt engineering with consistent JSON output; evaluated NLP pipeline quality using precision/recall metrics.",
+        "Implemented SQL-backed session persistence and result aggregation with Docker containerization and Git-based CI/CD (GitHub Actions), demonstrating applied MLOps and data engineering skills for production ML pipelines."
       ]
     },
     {
-      title: "PromptLab AI — LLM Prompt Testing and Optimisation Platform",
+      title: "PromptLab AI — LLM Prompt Testing and Optimization Platform",
       duration: "2026",
-      tags: ["FastAPI", "React.js", "TypeScript", "Docker", "CI/CD"],
+      github: "https://github.com/CHIDANANDM8/promptlab-ai",
+      tags: ["FastAPI", "RAG", "LLaMA", "OpenAI", "Docker", "CI/CD", "AWS", "MLOps"],
       details: [
-        "Engineered a full-stack prompt engineering workbench (FastAPI, React.js TypeScript, Tailwind CSS, SQLite) with an A/B testing engine for prompt variants, customisable LLM parameter controls (temperature, max tokens), and Recharts performance dashboards — enabling data-driven model evaluation across OpenAI and LLaMA providers.",
-        "Containerised with Docker Compose and NGINX reverse proxy; CI/CD pipeline via GitHub Actions for automated build and deployment — demonstrating production MLOps practices and end-to-end machine learning pipeline design."
+        "Engineered a full-stack Generative AI workbench in Python (FastAPI) with an A/B testing engine for LLM prompt variants, customizable model parameter controls (temperature, max tokens), and performance dashboards — enabling data-driven model evaluation across OpenAI and LLaMA (RAG-enabled) providers.",
+        "Containerized with Docker, version-controlled with Git, and deployed via CI/CD (GitHub Actions) on AWS — demonstrating production MLOps practices and end-to-end machine learning pipeline design, including model monitoring and evaluation."
       ]
     }
   ];
