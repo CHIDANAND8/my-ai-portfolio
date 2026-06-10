@@ -50,6 +50,10 @@ export default function About() {
                 <span className="font-bold text-white">AI/ML Engineer</span>
                 <span className="text-gray-400 text-sm">Reliance Retail Fashion & Trends Limited | Mar 2026</span>
               </li>
+              <li className="flex flex-col border-l-2 border-blue-500/50 pl-4">
+                <span className="font-bold text-white">MERN Stack Development</span>
+                <span className="text-gray-400 text-sm">Technologics Global | Aug 2025</span>
+              </li>
             </ul>
           </div>
         </div>
