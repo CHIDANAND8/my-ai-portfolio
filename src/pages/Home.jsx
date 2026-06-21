@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import heroImage from "../assets/hero.png";
+import profilePhoto from "../assets/profile-photo.jpg";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export default function Home() {
           className="mb-8 inline-block"
         >
           <div className="w-40 h-40 rounded-full mx-auto shadow-[0_0_30px_#4f46e5] flex items-center justify-center relative overflow-hidden border-4 border-primary/50">
-            <img src={heroImage} alt="Chidanand M" className="w-full h-full object-cover" />
+            <img src={profilePhoto} alt="Chidanand M" className="w-full h-full object-cover" />
           </div>
         </motion.div>
 

@@ -40,7 +40,7 @@ export default function AiIntro({ onComplete }) {
           filter: phase === "cinematic" || phase === "glitch" || phase === "reveal" ? "brightness(0.6) blur(0px)" : "brightness(0) blur(20px)"
         }}
         transition={{ duration: 4, ease: "easeOut" }}
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-contain bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${introImage})` }}
       />
 

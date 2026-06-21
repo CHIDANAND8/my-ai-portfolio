@@ -1,0 +1,6 @@
+backend/
+electron/
+copy-photo.js
+plan.txt
+render.yaml
+*.md
