@@ -33,7 +33,9 @@ class ExplainRequest(BaseModel):
 # -----------------
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 client = AsyncGroq(api_key=GROQ_API_KEY)
-MODEL_NAME = "llama-3.1-8b-instant" 
+# 'llama-3.1-8b-instant' was decommissioned by Groq on August 16, 2026.
+# Officially recommended replacement is 'openai/gpt-oss-20b' (or 'openai/gpt-oss-120b' / 'qwen/qwen3.6-27b').
+MODEL_NAME = os.environ.get("GROQ_MODEL", "openai/gpt-oss-20b") 
 
 async def generate_ai_response(prompt: str) -> str:
     """Helper function to communicate with Groq API."""
