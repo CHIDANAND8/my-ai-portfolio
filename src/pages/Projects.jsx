@@ -164,9 +164,25 @@ const ProjectCard = ({ proj }) => {
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Generative AI & LLMs", "Deep Learning & Vision", "MLOps & Tools"];
+  const categories = ["All", "Generative AI & LLMs", "Deep Learning & Vision", "EDA & Automation", "MLOps & Tools"];
 
   const projects = [
+    {
+      title: "PDK Validation Automation Framework — Semiconductor EDA QA & Regression Architecture",
+      category: "EDA & Automation",
+      duration: "Aug 2026",
+      github: "https://github.com/CHIDANANDM8/PDK-Validation-Automation-Framework",
+      highlights: [
+        { label: "Regression Engine", val: "Golden Baseline" },
+        { label: "Code Quality", val: ">85% Pytest Cov" }
+      ],
+      tags: ["Python 3.8+", "EDA Automation", "DRC & LVS", "Bash", "Tcl", "Regression Diffing", "HTML Dashboard", "pytest", "Subprocess QA"],
+      details: [
+        "Architected an automated 8-stage verification pipeline for semiconductor Process Design Kits (PDKs) covering layer definitions, DRC geometric rules (width/spacing/enclosure), LVS netlist connectivity, and compact device model boundaries.",
+        "Implemented resilient multi-format EDA log parsing with regex heuristic error classification and a differential golden baseline regression engine (results/baseline.json) to catch regressions and prevent multi-million dollar silicon respin risks ($5M–$20M+).",
+        "Engineered dual reporting infrastructure generating machine-readable JSON CI/CD payloads and an interactive standalone HTML5/CSS visual analytics dashboard with zero external CDN dependencies and >85% pytest test coverage."
+      ]
+    },
     {
       title: "OvaCare — Multi-Layer PCOS Diagnostic Vision Platform",
       category: "Deep Learning & Vision",

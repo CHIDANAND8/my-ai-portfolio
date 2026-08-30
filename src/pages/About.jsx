@@ -106,7 +106,7 @@ export default function About() {
             <div className="space-y-2">
               <span className="text-xs uppercase font-mono text-slate-400">Relevant Coursework:</span>
               <div className="flex flex-wrap gap-1.5 pt-1">
-                {["Python", "JavaScript", "React.js", "Machine Learning", "Deep Learning", "Data Structures & Algorithms", "Operating Systems", "Computer Networks", "Database Management Systems", "Cloud Computing"].map((course) => (
+                {["Python", "JavaScript", "React.js", "Machine Learning", "Deep Learning", "Data Structures & Algorithms", "Operating Systems", "Computer Networks", "Database Management Systems", "Cloud Computing","Artificial Intelligence","Software Development and System Design"].map((course) => (
                   <span key={course} className="text-xs font-mono px-2 py-1 rounded bg-white/[0.04] text-slate-300 border border-white/[0.06]">
                     {course}
                   </span>

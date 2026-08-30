@@ -70,10 +70,10 @@ export default function Home() {
   ];
 
   const suggestedPrompts = [
+    "Explain the PDK Validation Automation Framework",
     "How did Chidanand reduce LLM API calls by 40%?",
     "Explain the OvaCare multi-layer CNN architecture",
-    "What are Chidanand's AWS and MLOps qualifications?",
-    "Summarize candidate fit for AI/ML Engineer roles"
+    "What are Chidanand's AWS and MLOps qualifications?"
   ];
 
   const triggerChatbotQuery = (query) => {

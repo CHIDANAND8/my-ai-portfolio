@@ -9,7 +9,7 @@ export default function Chatbot() {
   const messagesEndRef = useRef(null);
 
   const defaultBotGreeting = {
-    bot: "Hello! I am Chidanand's Portfolio AI Copilot. I can answer questions about his experience at Reliance Retail (cutting API calls by 40%), his OvaCare computer vision system, MLOps, AWS certifications, and skill set. How can I help you evaluate his profile?",
+    bot: "Hello! I am Chidanand's Portfolio AI Copilot. I can answer questions about his PDK Validation Automation Framework (EDA QA & regression diffing), his experience at Reliance Retail (cutting API calls by 40%), his OvaCare computer vision system, and core technical skills. How can I help you evaluate his profile?",
     timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
   };
 
@@ -103,6 +103,7 @@ export default function Chatbot() {
   };
 
   const promptChips = [
+    "Explain the PDK Validation Framework",
     "How did you reduce API costs by 40%?",
     "Explain the OvaCare CNN model",
     "List core MLOps and AWS skills",
