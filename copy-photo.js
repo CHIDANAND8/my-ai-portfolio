@@ -1,28 +1,22 @@
 import fs from 'fs';
 import path from 'path';
 
-const sourcePath = 'C:\\Users\\Admin\\.gemini\\antigravity\\brain\\210b082c-bed7-4c50-9043-369645d58d24\\media__1781449836400.jpg';
-const destPath = 'C:\\Users\\Admin\\OneDrive\\Desktop\\My portfolio\\portfolio-ai\\src\\assets\\profile-photo.jpg';
+const sourcePath = 'C:\\Users\\Admin\\.gemini\\antigravity-ide\\brain\\34a1df8d-f20f-4caa-a580-88e965b37914\\.user_uploaded\\media_1790318695432.jpg';
+const destPath = path.resolve('src/assets/profile-photo.jpg');
 
 try {
-  // Read all files in the gemini media directory to find the latest
-  const dirPath = 'C:\\Users\\Admin\\.gemini\\antigravity\\brain\\210b082c-bed7-4c50-9043-369645d58d24';
-  const files = fs.readdirSync(dirPath);
-  let latestMedia = null;
-  
-  if (files.length > 0) {
-    const mediaFiles = files.filter(f => f.startsWith('media_'));
-    if (mediaFiles.length > 0) {
-      // Get the last uploaded one based on time
-      mediaFiles.sort();
-      latestMedia = path.join(dirPath, mediaFiles[mediaFiles.length - 1]);
+  const uploadDir = 'C:\\Users\\Admin\\.gemini\\antigravity-ide\\brain\\34a1df8d-f20f-4caa-a580-88e965b37914\\.user_uploaded';
+  let targetFile = sourcePath;
+  if (fs.existsSync(uploadDir)) {
+    const files = fs.readdirSync(uploadDir).filter(f => f.startsWith('media_'));
+    if (files.length > 0) {
+      files.sort();
+      targetFile = path.join(uploadDir, files[files.length - 1]);
     }
   }
 
-  const finalSource = latestMedia || sourcePath;
-  console.log('Copying photo from:', finalSource);
-  
-  fs.copyFileSync(finalSource, destPath);
+  console.log('Copying photo from:', targetFile);
+  fs.copyFileSync(targetFile, destPath);
   console.log('Successfully copied the photo to src/assets/profile-photo.jpg!');
   console.log('Your website should now update automatically.');
 } catch (error) {
